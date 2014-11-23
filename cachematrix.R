@@ -31,3 +31,10 @@ cacheSolve <- function(x=matrix(), ...) {
     message("getting cached data")
     return(i)
     
+    #if matrix was not solved get the  solution 
+    matx <- x$get()
+    i <- solve(matx, ...)
+    x$setinverse(i)
+    i
+  }
+  
