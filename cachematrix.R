@@ -25,4 +25,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x=matrix(), ...) {
   # check previous calculations    
-  
+  i <- x$getinverse()
+  #if matrix already solved get solution as a response
+  if(!is.null(i)) {
+    message("getting cached data")
+    return(i)
+    
