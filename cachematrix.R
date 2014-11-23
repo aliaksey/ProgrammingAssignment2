@@ -7,3 +7,10 @@ makeCacheMatrix <- function(x = matrix()) {
     x <<- y
     i <<- NULL
   }
+  
+  get <- function() x
+  #set the inverse matrix by solving it
+  setinverse <- function(solve) i <<- solve
+  #get the inverse matrix
+  getinverse <- function() i
+  
